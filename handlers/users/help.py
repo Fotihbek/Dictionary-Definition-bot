@@ -22,5 +22,5 @@ async def send_welcome(message: types.Message):
     
     await message.reply("""Dasturchi: Komilov Fotihbek
 Manzil: @ProgerUzb
-Boshqa loyihalar: @FotihbekProgs""")
+Boshqa loyihalar: @iProgs""")
 
