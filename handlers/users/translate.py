@@ -42,7 +42,7 @@ async def tarjimon(message: types.Message):
 
                 #await message.reply_audio(f"http://audio.linguarobot.io/en/{word.lower()}-us.mp3")
         else:
-            await message.reply("Ushbu so'zning ta'rifi topilmadi!")
+            await message.reply("Ushbu so'zning ta'rifi topilmadi!", reply_markup=category)
 
 
 @dp.callback_query_handler(text='uzdef')
