@@ -55,7 +55,18 @@ async def sendwiki(call: CallbackQuery):
     try:
         wikipedia.set_lang('en')
         result = wikipedia.summary(wordfind)
-        await call.message.answer(result, reply_markup=uzb)
+        text=result
+        if len(text) > 4000:
+            txt = ""
+            for b in text.split(" "):
+                txt += f"{b} "
+                if len(txt) >= 4000:
+                    await call.message.answer(txt, reply_markup=uzb)
+                    txt = ""
+            await call.message.answer(txt)
+        else:
+            await call.message.answer(result, reply_markup=uzb)
+
         global natija
         natija = result[:]
     except:
