@@ -6,5 +6,5 @@ from loader import dp
 
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
-    await message.answer(f"Salom, {message.from_user.full_name}! Marhamat, tarjima qilmoqchi bo'lgan so'zni kiritishingiz mumkin.")
+    await message.answer(f"Xush kelibsiz, {message.from_user.full_name}! Marhamat, tarjima qilmoqchi bo'lgan so'zni kiritishingiz mumkin.")
 
